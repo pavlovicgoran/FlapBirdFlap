@@ -24,7 +24,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     let pipeSpace: CGFloat = 100
     
-    var array = [SKSpriteNode]()
+    var array = [Pipe]()
     
     var numberOfPipes = 6
     
@@ -50,7 +50,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         createPipes()
         
-        array[0].position.x = 75
+        array[5].movePipe(middleOfScreen: frame.midX)
     }
     
     
@@ -115,18 +115,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     private func createLeftPipes(){
         for i in 0 ..< numberOfPipes{
-            createPipe(rotation: -CGFloat.pi/2, position: CGPoint(x: pipeLeftX, y: frame.height - heightOffset - CGFloat(i)*pipeSpace))
+            createPipe(rotation: -CGFloat.pi/2, position: CGPoint(x: pipeLeftX, y: frame.height - heightOffset - CGFloat(i)*pipeSpace), column: Column.left)
         }
     }
     
     private func createRightPipes(){
         for i in 0 ..< numberOfPipes{
-            createPipe(rotation: CGFloat.pi/2, position: CGPoint(x: pipeRightX, y: frame.height - heightOffset - CGFloat(i)*pipeSpace))
+            createPipe(rotation: CGFloat.pi/2, position: CGPoint(x: pipeRightX, y: frame.height - heightOffset - CGFloat(i)*pipeSpace), column: Column.right)
         }
     }
     
-    private func createPipe(rotation: CGFloat, position: CGPoint){
+    private func createPipe(rotation: CGFloat, position: CGPoint, column: Column){
         let pipe = Pipe(rotation: rotation, position: position, scale: scale)
+        pipe.setColumn(column: column)
         addChild(pipe)
         array.append(pipe)
     }
