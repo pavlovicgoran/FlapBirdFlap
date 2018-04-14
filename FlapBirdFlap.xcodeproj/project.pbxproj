@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5F487D3F2081EE7B00ED316C /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F487D3E2081EE7B00ED316C /* Bird.swift */; };
 		5F487D442081F51200ED316C /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F487D432081F51200ED316C /* Base.swift */; };
+		5F487D462081F97D00ED316C /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F487D452081F97D00ED316C /* Background.swift */; };
 		5F4D805B2080A6D400A4E5D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4D805A2080A6D400A4E5D9 /* AppDelegate.swift */; };
 		5F4D805D2080A6D400A4E5D9 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5F4D805C2080A6D400A4E5D9 /* GameScene.sks */; };
 		5F4D80612080A6D400A4E5D9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4D80602080A6D400A4E5D9 /* GameScene.swift */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		5F487D3E2081EE7B00ED316C /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
 		5F487D432081F51200ED316C /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		5F487D452081F97D00ED316C /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		5F4D80572080A6D400A4E5D9 /* FlapBirdFlap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlapBirdFlap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F4D805A2080A6D400A4E5D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F4D805C2080A6D400A4E5D9 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				5F487D3E2081EE7B00ED316C /* Bird.swift */,
 				5F487D432081F51200ED316C /* Base.swift */,
+				5F487D452081F97D00ED316C /* Background.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				5F487D442081F51200ED316C /* Base.swift in Sources */,
 				5F487D3F2081EE7B00ED316C /* Bird.swift in Sources */,
 				5F4D805B2080A6D400A4E5D9 /* AppDelegate.swift in Sources */,
+				5F487D462081F97D00ED316C /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

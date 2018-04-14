@@ -140,13 +140,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     private func createBackground(){
-        let background = SKSpriteNode(imageNamed: "background-day")
-        background.position = CGPoint(x: frame.width/2, y: frame.height/2 )
-        background.blendMode = .replace
-        background.zPosition = -1
+        let position = CGPoint(x: frame.width/2, y: frame.height/2)
+        let background = Background(position: position, scale: scale)
         addChild(background)
-        
-        background.setScale(scale)
     }
     
     func createScore() {
