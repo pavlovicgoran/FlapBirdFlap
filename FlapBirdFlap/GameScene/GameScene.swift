@@ -99,7 +99,7 @@ class GameScene: SKScene{
         case .dead:
             
             let scene = SKScene(fileNamed: "GameScene")!
-            let transition = SKTransition.moveIn(with: .right, duration: 1)
+            let transition = SKTransition.doorsOpenHorizontal(withDuration: 1)
             self.view?.presentScene(scene, transition: transition)
         }
         
