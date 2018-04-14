@@ -47,17 +47,7 @@ extension GameScene{
         addChild(background)
     }
     
-    func createScore() {
-        scoreLabel = SKLabelNode(fontNamed: "Optima-ExtraBlack")
-        scoreLabel.fontSize = 24
-        
-        scoreLabel.position = CGPoint(x: frame.midX, y: frame.maxY - 60)
-        scoreLabel.text = "SCORE: 0"
-        scoreLabel.fontColor = UIColor.white
-        scoreLabel.zPosition = 7
-        
-        addChild(scoreLabel)
-    }
+
     
     func createBase(){
         let position = CGPoint(x: frame.width/2, y: 0)

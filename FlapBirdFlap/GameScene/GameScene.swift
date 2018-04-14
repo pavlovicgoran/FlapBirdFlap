@@ -30,6 +30,8 @@ class GameScene: SKScene{
     
     var scoreLabel: SKLabelNode!
     
+    var scoreTimer: Timer!
+    
     var score = 0 {
         didSet {
             scoreLabel.text = "SCORE: \(score)"
@@ -41,6 +43,7 @@ class GameScene: SKScene{
         
         createBird()
         createBase()
+        
         
         setupGravity()
         
