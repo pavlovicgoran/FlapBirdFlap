@@ -37,7 +37,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func didMove(to view: SKView) {
-        setRightXPipe()
         checkDevice()
         
         createBird()
@@ -49,9 +48,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         createScore()
         
+        createPipes()
         
-        createLeftPipes()
-        createRightPipes()
         array[0].position.x = 75
     }
     
@@ -105,6 +103,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     }
     
+    private func createPipes(){
+        setRightXPipe()
+        createLeftPipes()
+        createRightPipes()
+    }
+    
     private func setRightXPipe(){
         pipeRightX = frame.width + 200
     }
@@ -122,19 +126,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     private func createPipe(rotation: CGFloat, position: CGPoint){
-        let pipeTexture = SKTexture(imageNamed: "pipe-green")
-        let pipe = SKSpriteNode(texture: pipeTexture)
-        
-        pipe.physicsBody = SKPhysicsBody(texture: pipe.texture!, size: pipe.texture!.size())
-        pipe.physicsBody?.isDynamic = false
-        
-        pipe.setScale(scale)
-        pipe.position = position
-        pipe.zRotation = rotation
-        
- 
-        pipe.zPosition = 5
-        
+        let pipe = Pipe(rotation: rotation, position: position, scale: scale)
         addChild(pipe)
         array.append(pipe)
     }
@@ -164,11 +156,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     private func createBird(){
-        let playerTexture = SKTexture(imageNamed: "yellowbird-downflap")
-        let frame2 = SKTexture(imageNamed: "yellowbird-midflap")
-        let frame3 = SKTexture(imageNamed: "yellowbird-upflap")
+        
         let startPosition = CGPoint(x: frame.width/2, y: frame.height/2)
-        bird = Bird(frame1: playerTexture, frame2: frame2, frame3: frame3, scale: scale, position: startPosition)
+        bird = Bird(scale: scale, position: startPosition)
         addChild(bird)
     }
     

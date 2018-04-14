@@ -11,13 +11,28 @@ import SpriteKit
 
 class Bird: SKSpriteNode {
     
-    init(frame1: SKTexture, frame2: SKTexture, frame3: SKTexture, scale: CGFloat, position: CGPoint){
+    private let yellowBirdDown = "yellowbird-downflap"
+    private let yellowBirdMid = "yellowbird-midflap"
+    private let yellowBirdUp = "yellowbird-upflap"
+    
+    private let blueBirdDown = "bluebird-downflap"
+    private let blueBirdMid = "bluebird-midflap"
+    private let blueBirdUp = "bluebird-upflap"
+    
+    private let redBirdDown = "redbird-downflap"
+    private let redBirdMid = "redbird-midflap"
+    private let redBirdUp = "redbird-upflap"
+    
+    init(scale: CGFloat, position: CGPoint){
+        let playerTexture = SKTexture(imageNamed: redBirdDown)
+        let frame2 = SKTexture(imageNamed: redBirdMid)
+        let frame3 = SKTexture(imageNamed: redBirdUp)
         
-        super.init(texture: frame1, color: .clear, size: frame1.size())
+        super.init(texture: playerTexture, color: .clear, size: playerTexture.size())
         zPosition = 10
         self.position = position
         
-        physicsBody = SKPhysicsBody(texture: frame1, size: frame1.size())
+        physicsBody = SKPhysicsBody(texture: texture!, size: texture!.size())
         physicsBody!.contactTestBitMask = physicsBody!.collisionBitMask
         physicsBody?.isDynamic = true
         
@@ -25,7 +40,7 @@ class Bird: SKSpriteNode {
         
         setScale(scale)
         
-        let animation = SKAction.animate(with: [frame1, frame2, frame3, frame2], timePerFrame: 0.01)
+        let animation = SKAction.animate(with: [playerTexture, frame2, frame3, frame2], timePerFrame: 0.01)
         let runForever = SKAction.repeatForever(animation)
         
         run(runForever)
