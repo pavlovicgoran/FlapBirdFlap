@@ -34,7 +34,7 @@ class Bird: SKSpriteNode {
         
         physicsBody = SKPhysicsBody(texture: texture!, size: texture!.size())
         physicsBody!.contactTestBitMask = physicsBody!.collisionBitMask
-        physicsBody?.isDynamic = true
+        physicsBody?.isDynamic = false
         
         //player.physicsBody?.collisionBitMask = 0
         

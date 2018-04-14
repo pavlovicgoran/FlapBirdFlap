@@ -61,4 +61,16 @@ extension GameScene{
         bird = Bird(scale: scale, position: startPosition)
         addChild(bird)
     }
+    
+    func createLogos(){
+        tutorial = SKSpriteNode(imageNamed: "tutorial")
+        tutorial.position = CGPoint(x: frame.width/2, y: frame.height/2)
+        addChild(tutorial)
+        
+        gameOver = SKSpriteNode(imageNamed: "gameover")
+        gameOver.position = CGPoint(x: frame.width/2, y: frame.height/2)
+        gameOver.alpha = 0
+        gameOver.zPosition = 7
+        addChild(gameOver)
+    }
 }

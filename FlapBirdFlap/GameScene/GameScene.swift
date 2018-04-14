@@ -32,7 +32,14 @@ class GameScene: SKScene{
     
     var scoreTimer: Timer!
     
+    var pipeTimer: Timer!
+    
     var popUpTime = 1.0
+    
+    var tutorial: SKSpriteNode!
+    var gameOver: SKSpriteNode!
+    
+    var gameState: GameState = .showingLogo
     
     var score = 0 {
         didSet {
@@ -46,25 +53,56 @@ class GameScene: SKScene{
         createBird()
         createBase()
         
+        createLogos()
         
         setupGravity()
         
         createBackground()
         
         createScore()
-        
         createPipes()
         
-        startMovingPipes()
     }
     
     
    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
        
+        switch gameState {
+        case .showingLogo:
+            gameState = .playing
+            
+            score = 0
+            
+            let fadeOut = SKAction.fadeOut(withDuration: 0.5)
+            let remove = SKAction.removeFromParent()
+            let wait = SKAction.wait(forDuration: 0.5)
+            
+            let activatePlayer = SKAction.run(){[unowned self] in
+                
+                self.bird.physicsBody?.isDynamic = true
+                self.setupScoreTimer()
+                self.startMovingPipes()
+                
+            }
+            
+            let sequence = SKAction.sequence([fadeOut, wait, activatePlayer, remove])
+            tutorial.run(sequence)
+            
+            
+        case .playing:
+            
+            bird.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+            bird.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 20))
+            
+            
+        case .dead:
+            
+            let scene = SKScene(fileNamed: "GameScene")!
+            let transition = SKTransition.moveIn(with: .right, duration: 1)
+            self.view?.presentScene(scene, transition: transition)
+        }
         
-        bird.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
-        bird.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 10))
         
     }
     
@@ -76,7 +114,9 @@ class GameScene: SKScene{
         
         if bird.position.y > frame.height{
             invalidateScoreTimer()
+            invalidatePipeTimer()
             bird.removeFromParent()
+            bird = nil
         }
         
         let value = bird.physicsBody!.velocity.dy * 0.001
@@ -90,35 +130,6 @@ class GameScene: SKScene{
         physicsWorld.contactDelegate = self
     }
     
-    private func checkDevice(){
-        if UIDevice().userInterfaceIdiom == .phone {
-            switch UIScreen.main.nativeBounds.height {
-            case 1136:
-                print("iPhone 5 or 5S or 5C")
-                heightOffset = 50
-                numberOfPipes = 4
-            case 1334:
-                print("iPhone 6/6S/7/8")
-                heightOffset = 50
-                numberOfPipes = 5
-            case 1920, 2208:
-                print("iPhone 6+/6S+/7+/8+")
-                heightOffset = 50
-                numberOfPipes = 6
-            case 2436:
-                print("iPhone X")
-                numberOfPipes = 7
-                heightOffset = 70
-            default:
-                print("unknown")
-                heightOffset = 50
-                numberOfPipes = 4
-            }
-        }
 
-    }
-    
-
-    
     
 }

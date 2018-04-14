@@ -22,10 +22,10 @@ extension GameScene{
         
         addChild(scoreLabel)
         
-        setupScoreTimer()
+        
     }
     
-    private func setupScoreTimer(){
+    func setupScoreTimer(){
         scoreTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateScoreTimer), userInfo: nil, repeats: true)
     }
     

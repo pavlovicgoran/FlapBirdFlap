@@ -15,13 +15,15 @@ extension GameScene{
     
     func startMovingPipes(){
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {[unowned self] in
-            self.choosePipeToMove()
-        })
+        pipeTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(choosePipeToMove), userInfo: nil, repeats: false)
         
     }
     
-    private func choosePipeToMove(){
+    func invalidatePipeTimer(){
+        pipeTimer.invalidate()
+    }
+    
+    @objc func choosePipeToMove(){
         
         guard bird != nil else {
             return
@@ -40,9 +42,8 @@ extension GameScene{
         
         let delay = RandomDouble(min: minDelay, max: maxDelay)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5*Pipe.animationDuration + delay) {[unowned self] in
-            self.choosePipeToMove()
-        }
+        pipeTimer.invalidate()
+        pipeTimer = Timer.scheduledTimer(timeInterval: delay + 1.5 * Pipe.animationDuration, target: self, selector: #selector(choosePipeToMove), userInfo: nil, repeats: false)
         
     }
 }

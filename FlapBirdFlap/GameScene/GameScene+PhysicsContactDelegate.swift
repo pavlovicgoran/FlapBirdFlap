@@ -15,7 +15,11 @@ extension GameScene: SKPhysicsContactDelegate{
     func didBegin(_ contact: SKPhysicsContact) {
         if contact.bodyA.node == bird || contact.bodyB.node == bird{
             invalidateScoreTimer()
+            invalidatePipeTimer()
             bird.removeFromParent()
+            bird = nil
+            gameOver.alpha = 1
+            gameState = .dead
         }
     }
     
