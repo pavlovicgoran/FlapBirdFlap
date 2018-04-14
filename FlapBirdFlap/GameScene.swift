@@ -41,6 +41,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         checkDevice()
         
         createBird()
+        createBase()
         
         setupGravity()
         
@@ -146,7 +147,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(background)
         
         background.setScale(scale)
-        createBase()
     }
     
     func createScore() {
@@ -162,17 +162,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     private func createBase(){
-        let background = SKSpriteNode(imageNamed: "base")
-        background.position = CGPoint(x: frame.width/2, y: 0)
-        background.blendMode = .replace
-        background.zPosition = 0
-        
-        background.physicsBody = SKPhysicsBody(texture: background.texture!, size: background.texture!.size())
-        background.physicsBody?.isDynamic = false
-        
-        addChild(background)
-        
-        background.setScale(scale)
+        let position = CGPoint(x: frame.width/2, y: 0)
+        let base = Base(position: position, scale: scale)
+        addChild(base)
     }
     
     private func createBird(){
