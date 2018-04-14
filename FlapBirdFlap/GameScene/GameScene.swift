@@ -32,6 +32,8 @@ class GameScene: SKScene{
     
     var scoreTimer: Timer!
     
+    var popUpTime = 1.0
+    
     var score = 0 {
         didSet {
             scoreLabel.text = "SCORE: \(score)"
@@ -53,7 +55,7 @@ class GameScene: SKScene{
         
         createPipes()
         
-        array[5].movePipe(middleOfScreen: frame.midX)
+        startMovingPipes()
     }
     
     
@@ -62,7 +64,7 @@ class GameScene: SKScene{
        
         
         bird.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
-        bird.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 11))
+        bird.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 10))
         
     }
     
@@ -70,6 +72,11 @@ class GameScene: SKScene{
         
         guard bird != nil else {
             return
+        }
+        
+        if bird.position.y > frame.height{
+            invalidateScoreTimer()
+            bird.removeFromParent()
         }
         
         let value = bird.physicsBody!.velocity.dy * 0.001

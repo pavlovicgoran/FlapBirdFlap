@@ -21,7 +21,7 @@ class Pipe: SKSpriteNode {
     
     var column: Column?
     
-    var animationDuration: TimeInterval = 1
+    static var animationDuration: TimeInterval = 1.2
     
     init(rotation: CGFloat, position: CGPoint, scale: CGFloat) {
         let pipeTexture = SKTexture(imageNamed: greenPipe)
@@ -59,8 +59,8 @@ class Pipe: SKSpriteNode {
         }
         
         
-        let moveForward = SKAction.moveTo(x: xcoordinate, duration: animationDuration)
-        let moveBackward = SKAction.moveTo(x: position.x, duration: animationDuration)
+        let moveForward = SKAction.moveTo(x: xcoordinate, duration: Pipe.animationDuration)
+        let moveBackward = SKAction.moveTo(x: position.x, duration: Pipe.animationDuration)
         
         let sequence = SKAction.sequence([moveForward, moveBackward])
         
