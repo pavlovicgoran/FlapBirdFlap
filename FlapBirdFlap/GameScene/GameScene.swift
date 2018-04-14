@@ -11,7 +11,7 @@ import GameplayKit
 
 
 
-class GameScene: SKScene, SKPhysicsContactDelegate {
+class GameScene: SKScene{
     
     
     var bird: Bird!
@@ -64,6 +64,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(_ currentTime: TimeInterval) {
+        
+        guard bird != nil else {
+            return
+        }
+        
         let value = bird.physicsBody!.velocity.dy * 0.001
         let rotate = SKAction.rotate(toAngle: value, duration: 0.1)
         
