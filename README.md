@@ -1,2 +1,3 @@
 # FlapBirdFlap
-Work in progress
+
+<img src ="screenshots/flap.gif" width = "200"/>
