@@ -55,6 +55,7 @@
 		5F4D80BB2080A96800A4E5D9 /* yellowbird-midflap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F4D80972080A96700A4E5D9 /* yellowbird-midflap.png */; };
 		5F4D80BC2080A96800A4E5D9 /* yellowbird-upflap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F4D80982080A96700A4E5D9 /* yellowbird-upflap.png */; };
 		5FC662552083304D00E109E5 /* GameScene+SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC662542083304D00E109E5 /* GameScene+SoundManager.swift */; };
+		5FC66257208348ED00E109E5 /* GameScene+PersistingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC66256208348ED00E109E5 /* GameScene+PersistingData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		5F4D80972080A96700A4E5D9 /* yellowbird-midflap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowbird-midflap.png"; sourceTree = "<group>"; };
 		5F4D80982080A96700A4E5D9 /* yellowbird-upflap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowbird-upflap.png"; sourceTree = "<group>"; };
 		5FC662542083304D00E109E5 /* GameScene+SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+SoundManager.swift"; sourceTree = "<group>"; };
+		5FC66256208348ED00E109E5 /* GameScene+PersistingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+PersistingData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				5F487D5620823BCD00ED316C /* GameScene+DeviceCompatibility.swift */,
 				5F487D5820823C4D00ED316C /* GameState.swift */,
 				5FC662542083304D00E109E5 /* GameScene+SoundManager.swift */,
+				5FC66256208348ED00E109E5 /* GameScene+PersistingData.swift */,
 			);
 			path = GameScene;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				5F487D4D20821FD000ED316C /* GameScene+PhysicsContactDelegate.swift in Sources */,
 				5F487D512082254A00ED316C /* GameScene+MovingPipes.swift in Sources */,
 				5F487D462081F97D00ED316C /* Background.swift in Sources */,
+				5FC66257208348ED00E109E5 /* GameScene+PersistingData.swift in Sources */,
 				5F487D5320822BAE00ED316C /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

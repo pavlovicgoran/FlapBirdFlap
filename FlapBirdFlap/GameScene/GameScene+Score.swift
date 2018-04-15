@@ -56,6 +56,8 @@ extension GameScene{
         highScoreHolder.fontColor = UIColor.white
         highScoreHolder.zPosition = 7
         
+        restoreHighscore()
+        
         addChild(highScoreHolder)
         
         addChild(highScoreLabel)

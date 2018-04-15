@@ -27,6 +27,7 @@ extension GameScene: SKPhysicsContactDelegate{
         playSound(sound: .hit)
         updateHighscore()
         showHighScore()
+        saveHighscore()
     }
     
 }
