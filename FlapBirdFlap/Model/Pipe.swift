@@ -21,7 +21,7 @@ class Pipe: SKSpriteNode {
     
     var column: Column?
     
-    static var animationDuration: TimeInterval = 1.2
+    static var animationDuration: TimeInterval = 1.1
     
     init(rotation: CGFloat, position: CGPoint, scale: CGFloat) {
         let pipeTexture = SKTexture(imageNamed: greenPipe)
