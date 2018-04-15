@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import SpriteKit
-
+// MARK: Score
 extension GameScene{
     func createScore() {
         scoreLabel = SKLabelNode(fontNamed: "Optima-ExtraBlack")
@@ -37,3 +37,54 @@ extension GameScene{
         scoreTimer.invalidate()
     }
 }
+// MARK: Highscore
+
+extension GameScene{
+    func createHighscore(){
+        highScoreLabel = SKLabelNode(fontNamed: "Optima-ExtraBlack")
+        highScoreLabel.fontSize = 100
+        
+        highScoreLabel.position = CGPoint(x: frame.midX, y: frame.maxY - 160)
+        highScoreLabel.text = "\(highScore)"
+        highScoreLabel.fontColor = UIColor.white
+        highScoreLabel.zPosition = 7
+        
+        highScoreHolder = SKLabelNode(fontNamed: "Optima-ExtraBlack")
+        highScoreHolder.fontSize = 20
+        highScoreHolder.position = CGPoint(x: highScoreLabel.position.x, y: highScoreLabel.position.y + 80)
+        highScoreHolder.text = "YOUR HIGHSCORE:"
+        highScoreHolder.fontColor = UIColor.white
+        highScoreHolder.zPosition = 7
+        
+        addChild(highScoreHolder)
+        
+        addChild(highScoreLabel)
+    }
+    
+    func scoreFadingOut(){
+        createScore()
+        let fadeOut = SKAction.fadeOut(withDuration: 0.5)
+        let remove = SKAction.removeFromParent()
+        let wait = SKAction.wait(forDuration: 0.5)
+        
+        let activatePlayer = SKAction.run(){[unowned self] in
+            
+            self.bird.physicsBody?.isDynamic = true
+            self.setupScoreTimer()
+            self.startMovingPipes()
+            
+        }
+        
+        let sequence = SKAction.sequence([fadeOut, wait, activatePlayer, remove])
+        tutorial.run(sequence)
+        highScoreLabel.run(fadeOut)
+        highScoreHolder.run(fadeOut)
+    }
+    
+    func showHighScore(){
+        highScoreHolder.alpha = 1
+        highScoreLabel.alpha = 1
+    }
+}
+
+

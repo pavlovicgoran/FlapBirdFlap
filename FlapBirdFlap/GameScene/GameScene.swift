@@ -29,6 +29,8 @@ class GameScene: SKScene{
     var numberOfPipes = 6
     
     var scoreLabel: SKLabelNode!
+    var highScoreLabel: SKLabelNode!
+    var highScoreHolder: SKLabelNode!
     
     var scoreTimer: Timer!
     
@@ -41,6 +43,11 @@ class GameScene: SKScene{
     
     var gameState: GameState = .showingLogo
     
+    var highScore = 0{
+        didSet{
+            highScoreLabel.text = "\(highScore)"
+        }
+    }
     
     var score = 0 {
         didSet {
@@ -59,8 +66,8 @@ class GameScene: SKScene{
         setupGravity()
         
         createBackground()
-        
-        createScore()
+        createHighscore()
+        //createScore()
         createPipes()
         
     }
@@ -73,23 +80,7 @@ class GameScene: SKScene{
         case .showingLogo:
             gameState = .playing
             
-            score = 0
-            
-            let fadeOut = SKAction.fadeOut(withDuration: 0.5)
-            let remove = SKAction.removeFromParent()
-            let wait = SKAction.wait(forDuration: 0.5)
-            
-            let activatePlayer = SKAction.run(){[unowned self] in
-                
-                self.bird.physicsBody?.isDynamic = true
-                self.setupScoreTimer()
-                self.startMovingPipes()
-                
-            }
-            
-            let sequence = SKAction.sequence([fadeOut, wait, activatePlayer, remove])
-            tutorial.run(sequence)
-            
+            scoreFadingOut()
             
         case .playing:
             

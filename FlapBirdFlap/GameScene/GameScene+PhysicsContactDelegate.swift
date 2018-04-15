@@ -25,6 +25,7 @@ extension GameScene: SKPhysicsContactDelegate{
         gameOver.alpha = 1
         gameState = .dead
         playSound(sound: .hit)
+        showHighScore()
     }
     
 }
