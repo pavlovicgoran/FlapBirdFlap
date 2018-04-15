@@ -97,7 +97,7 @@ class GameScene: SKScene{
             
             
         case .dead:
-            
+            invalidatePipeTimer()
             let scene = SKScene(fileNamed: "GameScene")!
             let transition = SKTransition.doorsOpenHorizontal(withDuration: 1)
             self.view?.presentScene(scene, transition: transition)
@@ -112,18 +112,23 @@ class GameScene: SKScene{
             return
         }
         
+        birdFallingAnimation()
+        
         if bird.position.y > frame.height{
-            invalidateScoreTimer()
-            invalidatePipeTimer()
-            bird.removeFromParent()
-            bird = nil
+            endGame()
         }
         
+        
+    }
+    
+    private func birdFallingAnimation(){
         let value = bird.physicsBody!.velocity.dy * 0.001
         let rotate = SKAction.rotate(toAngle: value, duration: 0.1)
         
         bird.run(rotate)
     }
+    
+    
     
     private func setupGravity(){
         physicsWorld.gravity = CGVector(dx: 0.0, dy: -5.0)
