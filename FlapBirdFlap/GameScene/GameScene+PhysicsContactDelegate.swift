@@ -20,6 +20,7 @@ extension GameScene: SKPhysicsContactDelegate{
     
     func endGame(){
         invalidateScoreTimer()
+        explode()
         bird.removeFromParent()
         bird = nil
         gameOver.alpha = 1
@@ -28,6 +29,13 @@ extension GameScene: SKPhysicsContactDelegate{
         updateHighscore()
         showHighScore()
         saveHighscore()
+    }
+    
+    func explode(){
+        if let explosion = SKEmitterNode(fileNamed: "Explosion") {
+            explosion.position = bird.position
+            addChild(explosion)
+        }
     }
     
 }

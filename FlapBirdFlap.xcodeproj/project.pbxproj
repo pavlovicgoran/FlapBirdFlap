@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F38B5BA2083B9760052A88E /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5F38B5B82083B9760052A88E /* Explosion.sks */; };
+		5F38B5BB2083B9760052A88E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F38B5B92083B9760052A88E /* Assets.xcassets */; };
 		5F487D3F2081EE7B00ED316C /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F487D3E2081EE7B00ED316C /* Bird.swift */; };
 		5F487D442081F51200ED316C /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F487D432081F51200ED316C /* Base.swift */; };
 		5F487D462081F97D00ED316C /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F487D452081F97D00ED316C /* Background.swift */; };
@@ -59,6 +61,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F38B5B82083B9760052A88E /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
+		5F38B5B92083B9760052A88E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F487D3E2081EE7B00ED316C /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
 		5F487D432081F51200ED316C /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		5F487D452081F97D00ED316C /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
@@ -189,6 +193,8 @@
 			children = (
 				5F4D80732080A96700A4E5D9 /* audio */,
 				5F4D807E2080A96700A4E5D9 /* sprites */,
+				5F38B5B82083B9760052A88E /* Explosion.sks */,
+				5F38B5B92083B9760052A88E /* Assets.xcassets */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -299,6 +305,7 @@
 				5F4D80B32080A96800A4E5D9 /* gameover.png in Resources */,
 				5F4D80B22080A96800A4E5D9 /* bluebird-upflap.png in Resources */,
 				5F4D80B62080A96800A4E5D9 /* pipe-red.png in Resources */,
+				5F38B5BB2083B9760052A88E /* Assets.xcassets in Resources */,
 				5F4D80AB2080A96800A4E5D9 /* 8.png in Resources */,
 				5F4D80B42080A96800A4E5D9 /* message.png in Resources */,
 				5F4D80A92080A96800A4E5D9 /* 6.png in Resources */,
@@ -308,6 +315,7 @@
 				5F4D80A82080A96800A4E5D9 /* 5.png in Resources */,
 				5F4D80B02080A96800A4E5D9 /* bluebird-downflap.png in Resources */,
 				5F4D80B12080A96800A4E5D9 /* bluebird-midflap.png in Resources */,
+				5F38B5BA2083B9760052A88E /* Explosion.sks in Resources */,
 				5F4D80A52080A96800A4E5D9 /* 2.png in Resources */,
 				5F4D80AE2080A96800A4E5D9 /* background-night.png in Resources */,
 				5F4D80A62080A96800A4E5D9 /* 3.png in Resources */,
