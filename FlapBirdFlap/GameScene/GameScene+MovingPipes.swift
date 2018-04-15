@@ -25,9 +25,6 @@ extension GameScene{
     
     @objc func choosePipeToMove(){
         
-        //guard bird != nil else {
-           // return
-        //}
         
         popUpTime *= 0.99
         

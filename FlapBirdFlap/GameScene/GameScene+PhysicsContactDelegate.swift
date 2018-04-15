@@ -20,9 +20,7 @@ extension GameScene: SKPhysicsContactDelegate{
     
     func endGame(){
         invalidateScoreTimer()
-        //invalidatePipeTimer()
         bird.removeFromParent()
-        bird = nil
         gameOver.alpha = 1
         gameState = .dead
     }
