@@ -16,6 +16,7 @@ extension GameScene{
         setRightXPipe()
         createLeftPipes()
         createRightPipes()
+        Pipe.animationDuration = 1.1
     }
     
     private func setRightXPipe(){
