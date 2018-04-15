@@ -85,6 +85,12 @@ extension GameScene{
         highScoreHolder.alpha = 1
         highScoreLabel.alpha = 1
     }
+    
+    func updateHighscore(){
+        if score > highScore{
+            highScore = score
+        }
+    }
 }
 
 
