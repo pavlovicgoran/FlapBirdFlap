@@ -41,6 +41,7 @@ class GameScene: SKScene{
     
     var gameState: GameState = .showingLogo
     
+    
     var score = 0 {
         didSet {
             scoreLabel.text = "SCORE: \(score)"
@@ -94,7 +95,7 @@ class GameScene: SKScene{
             
             bird.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
             bird.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 20))
-            
+            playSound(sound: .flap)
             
         case .dead:
             invalidatePipeTimer()

@@ -26,10 +26,7 @@
 		5F4D80662080A6D400A4E5D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F4D80642080A6D400A4E5D9 /* Main.storyboard */; };
 		5F4D80682080A6D400A4E5D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F4D80672080A6D400A4E5D9 /* Assets.xcassets */; };
 		5F4D806B2080A6D400A4E5D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F4D80692080A6D400A4E5D9 /* LaunchScreen.storyboard */; };
-		5F4D809A2080A96800A4E5D9 /* die.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F4D80752080A96700A4E5D9 /* die.wav */; };
 		5F4D809C2080A96800A4E5D9 /* hit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F4D80772080A96700A4E5D9 /* hit.wav */; };
-		5F4D809E2080A96800A4E5D9 /* point.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F4D80792080A96700A4E5D9 /* point.wav */; };
-		5F4D80A02080A96800A4E5D9 /* swoosh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F4D807B2080A96700A4E5D9 /* swoosh.wav */; };
 		5F4D80A22080A96800A4E5D9 /* wing.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F4D807D2080A96700A4E5D9 /* wing.wav */; };
 		5F4D80A32080A96800A4E5D9 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F4D807F2080A96700A4E5D9 /* 0.png */; };
 		5F4D80A42080A96800A4E5D9 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F4D80802080A96700A4E5D9 /* 1.png */; };
@@ -57,6 +54,7 @@
 		5F4D80BA2080A96800A4E5D9 /* yellowbird-downflap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F4D80962080A96700A4E5D9 /* yellowbird-downflap.png */; };
 		5F4D80BB2080A96800A4E5D9 /* yellowbird-midflap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F4D80972080A96700A4E5D9 /* yellowbird-midflap.png */; };
 		5F4D80BC2080A96800A4E5D9 /* yellowbird-upflap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F4D80982080A96700A4E5D9 /* yellowbird-upflap.png */; };
+		5FC662552083304D00E109E5 /* GameScene+SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC662542083304D00E109E5 /* GameScene+SoundManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,10 +79,7 @@
 		5F4D80672080A6D400A4E5D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F4D806A2080A6D400A4E5D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F4D806C2080A6D400A4E5D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5F4D80752080A96700A4E5D9 /* die.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = die.wav; sourceTree = "<group>"; };
 		5F4D80772080A96700A4E5D9 /* hit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hit.wav; sourceTree = "<group>"; };
-		5F4D80792080A96700A4E5D9 /* point.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = point.wav; sourceTree = "<group>"; };
-		5F4D807B2080A96700A4E5D9 /* swoosh.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = swoosh.wav; sourceTree = "<group>"; };
 		5F4D807D2080A96700A4E5D9 /* wing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wing.wav; sourceTree = "<group>"; };
 		5F4D807F2080A96700A4E5D9 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 		5F4D80802080A96700A4E5D9 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
@@ -112,6 +107,7 @@
 		5F4D80962080A96700A4E5D9 /* yellowbird-downflap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowbird-downflap.png"; sourceTree = "<group>"; };
 		5F4D80972080A96700A4E5D9 /* yellowbird-midflap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowbird-midflap.png"; sourceTree = "<group>"; };
 		5F4D80982080A96700A4E5D9 /* yellowbird-upflap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowbird-upflap.png"; sourceTree = "<group>"; };
+		5FC662542083304D00E109E5 /* GameScene+SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+SoundManager.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +142,7 @@
 				5F487D502082254A00ED316C /* GameScene+MovingPipes.swift */,
 				5F487D5620823BCD00ED316C /* GameScene+DeviceCompatibility.swift */,
 				5F487D5820823C4D00ED316C /* GameState.swift */,
+				5FC662542083304D00E109E5 /* GameScene+SoundManager.swift */,
 			);
 			path = GameScene;
 			sourceTree = "<group>";
@@ -196,10 +193,7 @@
 		5F4D80732080A96700A4E5D9 /* audio */ = {
 			isa = PBXGroup;
 			children = (
-				5F4D80752080A96700A4E5D9 /* die.wav */,
 				5F4D80772080A96700A4E5D9 /* hit.wav */,
-				5F4D80792080A96700A4E5D9 /* point.wav */,
-				5F4D807B2080A96700A4E5D9 /* swoosh.wav */,
 				5F4D807D2080A96700A4E5D9 /* wing.wav */,
 			);
 			path = audio;
@@ -314,7 +308,6 @@
 				5F4D80A52080A96800A4E5D9 /* 2.png in Resources */,
 				5F4D80AE2080A96800A4E5D9 /* background-night.png in Resources */,
 				5F4D80A62080A96800A4E5D9 /* 3.png in Resources */,
-				5F4D80A02080A96800A4E5D9 /* swoosh.wav in Resources */,
 				5F4D809C2080A96800A4E5D9 /* hit.wav in Resources */,
 				5F4D80AD2080A96800A4E5D9 /* background-day.png in Resources */,
 				5F4D80AC2080A96800A4E5D9 /* 9.png in Resources */,
@@ -324,7 +317,6 @@
 				5F4D80AA2080A96800A4E5D9 /* 7.png in Resources */,
 				5F4D80BC2080A96800A4E5D9 /* yellowbird-upflap.png in Resources */,
 				5F4D80BB2080A96800A4E5D9 /* yellowbird-midflap.png in Resources */,
-				5F4D809E2080A96800A4E5D9 /* point.wav in Resources */,
 				5F487D552082338E00ED316C /* tutorial.png in Resources */,
 				5F4D80682080A6D400A4E5D9 /* Assets.xcassets in Resources */,
 				5F4D80A42080A96800A4E5D9 /* 1.png in Resources */,
@@ -332,7 +324,6 @@
 				5F4D80A72080A96800A4E5D9 /* 4.png in Resources */,
 				5F4D80A22080A96800A4E5D9 /* wing.wav in Resources */,
 				5F4D80BA2080A96800A4E5D9 /* yellowbird-downflap.png in Resources */,
-				5F4D809A2080A96800A4E5D9 /* die.wav in Resources */,
 				5F4D806B2080A6D400A4E5D9 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +343,7 @@
 				5F487D442081F51200ED316C /* Base.swift in Sources */,
 				5F487D5720823BCD00ED316C /* GameScene+DeviceCompatibility.swift in Sources */,
 				5F487D5920823C4D00ED316C /* GameState.swift in Sources */,
+				5FC662552083304D00E109E5 /* GameScene+SoundManager.swift in Sources */,
 				5F487D3F2081EE7B00ED316C /* Bird.swift in Sources */,
 				5F4D805B2080A6D400A4E5D9 /* AppDelegate.swift in Sources */,
 				5F487D4D20821FD000ED316C /* GameScene+PhysicsContactDelegate.swift in Sources */,

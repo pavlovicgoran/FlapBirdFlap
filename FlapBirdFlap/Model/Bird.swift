@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 
 class Bird: SKSpriteNode {
-    
+    /*
     private let yellowBirdDown = "yellowbird-downflap"
     private let yellowBirdMid = "yellowbird-midflap"
     private let yellowBirdUp = "yellowbird-upflap"
@@ -18,7 +18,7 @@ class Bird: SKSpriteNode {
     private let blueBirdDown = "bluebird-downflap"
     private let blueBirdMid = "bluebird-midflap"
     private let blueBirdUp = "bluebird-upflap"
-    
+    */
     private let redBirdDown = "redbird-downflap"
     private let redBirdMid = "redbird-midflap"
     private let redBirdUp = "redbird-upflap"

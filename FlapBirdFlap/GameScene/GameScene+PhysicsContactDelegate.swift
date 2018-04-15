@@ -21,8 +21,10 @@ extension GameScene: SKPhysicsContactDelegate{
     func endGame(){
         invalidateScoreTimer()
         bird.removeFromParent()
+        bird = nil
         gameOver.alpha = 1
         gameState = .dead
+        playSound(sound: .hit)
     }
     
 }
